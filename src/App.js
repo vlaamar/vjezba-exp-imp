@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import Brojevi from "./Utilities/exp_default";
+
+import { sum } from "./Utilities/exp_named";
+import { mult } from "./Utilities/exp_named";
+import { sub } from "./Utilities/exp_named";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Import putem default export modula</h2>
+      <p>1. broj je: {Brojevi.num1}</p>
+      <p>2. broj je: {Brojevi.num2}</p>
+      <h2>Import putem named modula</h2>
+      <p> Zbroj: {sum(Brojevi.num1, Brojevi.num2)}</p>
+      <p> Umnožak: {mult(Brojevi.num1, Brojevi.num2)}</p>
+      <p> Razlika: {sub(Brojevi.num1, Brojevi.num2)}</p>
     </div>
   );
 }
